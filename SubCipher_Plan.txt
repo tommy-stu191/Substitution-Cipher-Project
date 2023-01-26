@@ -11,19 +11,21 @@ substitution_encrypt:
 	for each letter in ciph_alph:
 		append ciph_alph to cipher_list
 		
+	plain_to_cipher()
+	
+	write string to file
+	
+
+	
+		
+plain_to_cipher:
 	for element in plaintext_file:
 		grab base_list index of element
 		(use index to grab element from ciph_alph)
 		append new element to ciph_list
 	
 	concatenate ciph_list into string
-	
-	write string to file
-	
-		
-	
-		
-	
+
 key_checker:
 	if no duplicates:
 		return TRUE
@@ -36,3 +38,8 @@ key_to_list:
 		append key to key
 	return key_lst
 	
+ciph_alph_checker:
+	check length
+	no dupes
+	
+
