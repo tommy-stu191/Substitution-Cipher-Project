@@ -1,15 +1,15 @@
 substitution_encrypt:
-	if ciph_alph_checker(cipher_alph)
+	if cipher_alphabet_checker(cipher_alphabet)
 		open files
 	else
 		terminate
 		
 	base_list = regular_alphabet
-	ciph_alph_list = ciph_alph_to_lst(key)
+	cipher_alphabet_list = cipher_alphabet_to_list(cipher_alphabet)
 	cipher_list = []
 	
-	for each letter in ciph_alph:
-		append ciph_alph to cipher_list
+	for each letter in cipher_alphabet:
+		append cipher_alphabet to cipher_list
 		
 	plain_to_cipher()
 	
@@ -21,25 +21,23 @@ substitution_encrypt:
 plain_to_cipher:
 	for element in plaintext_file:
 		grab base_list index of element
-		(use index to grab element from ciph_alph)
-		append new element to ciph_list
+		(use index to grab element from cipher_alphabet)
+		append new element to cipher_list
 	
-	concatenate ciph_list into string
+	concatenate cipher_list into string
 
-key_checker:
-	if no duplicates:
+cipher_alphabet_checker:
+	if (no duplicates) and (length==26):
 		return TRUE
 	else:
 		return FALSE
 		
-key_to_list:
+ciph_alph_to_list:
 	key_lst = []
 	for elmt in key:
 		append key to key
 	return key_lst
 	
-ciph_alph_checker:
-	check length
-	no dupes
+
 	
 
