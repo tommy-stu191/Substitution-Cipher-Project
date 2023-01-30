@@ -25,7 +25,3 @@ def _crypter(plaintext_list, cipher_list):
             ciphertext_list.append(crypt_char.upper())
 
     return ciphertext_list
-
-
-_crypter("liquid.txt", "cipher.txt")
-
