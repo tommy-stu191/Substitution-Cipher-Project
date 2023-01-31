@@ -1,3 +1,7 @@
+import helper_functions
+import _crypter
+
+
 def substitution_encrypt(plaintext_file, ciphertext_file, cipher_alphabet):
     """
 
@@ -8,16 +12,16 @@ def substitution_encrypt(plaintext_file, ciphertext_file, cipher_alphabet):
     """
 
     # Testing validity of cipher_alphabet
-    if not cipher_alphabet_checker(cipher_alphabet):
+    if not helper_functions.cipher_alphabet_checker(cipher_alphabet):
         print("Invalid cipher_alphabet")
         exit()
 
     # Converting the file & string to lists
-    plaintext_list = textfile_to_list(plaintext_file)
-    cipher_list = cipher_alphabet_to_list(cipher_alphabet)
+    plaintext_list = helper_functions.textfile_to_list(plaintext_file)
+    cipher_list = helper_functions.cipher_alphabet_to_list(cipher_alphabet)
 
     ciphertext_list = _crypter(plaintext_list, cipher_list)
 
-    ciphertext_file = list_to_textfile(ciphertext_list, ciphertext_file)
+    ciphertext_file = helper_functions.textfile_to_list(ciphertext_list, ciphertext_file)
 
     return ciphertext_file
