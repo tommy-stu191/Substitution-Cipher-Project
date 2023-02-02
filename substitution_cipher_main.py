@@ -96,7 +96,6 @@ def shift_cipher(shift: int):
     """
     Shifts the original alphabet list x times
     :param shift: number of shift operations to perform on the cipher list
-    :param pre_cipher: list containing all chars to be encrypted
     :return: list of encryption
     Ex:
     shift_cipher(3,[a..z]) -> [z,y,x,a,b,c...]
@@ -112,7 +111,7 @@ def shift_cipher(shift: int):
 
 def substitution_encrypt(plaintext_file, ciphertext_file, cipher_alphabet):
     """
-    Encrypts the plaintext_file based on generic substitution encyrption
+    Encrypts the plaintext_file based on generic substitution encryption
     :param plaintext_file: a *.txt file that will be encrypted
     :param ciphertext_file: the *.txt filename of the returned encrypted file
     :param cipher_alphabet: a string, the encryption pattern
@@ -204,7 +203,7 @@ def atbash_encrypt(plaintext_file, ciphertext_file):
 
 def atbash_decrypt(ciphertext_file, plaintext_file):
     """
-    Decrypts Ciphertext_file based on atbash encyption
+    Decrypts Ciphertext_file based on atbash encryption
     :param ciphertext_file: Encrypted .txt file to decrypt
     :param plaintext_file: Final decryption of ciphertext_file
     :return: A *.txt file containing decrypted ciphertext
