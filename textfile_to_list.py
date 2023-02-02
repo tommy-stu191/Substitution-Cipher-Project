@@ -1,6 +1,6 @@
 def textfile_to_list(text_file):
     """
-
+    Converts .txt to a list of chars
     :param text_file: a text file
     :return: a list of characters from the text file
     """

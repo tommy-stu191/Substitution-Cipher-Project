@@ -1,6 +1,9 @@
 def cipher_alphabet_checker(cipher_alphabet):
     """
-
+    Checks that cipher alphabet given, meet specifications:
+    1. 26 Chars
+    2. No duplicates
+    3. ...
     :param cipher_alphabet: a string of letters
     :return: a T/F boolean value
     """

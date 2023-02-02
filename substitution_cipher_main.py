@@ -1,6 +1,9 @@
-def cipher_alphabet_checker(cipher_alphabet):
+def cipher_alphabet_checker(cipher_alphabet: str):
     """
-
+    Checks that cipher alphabet given, meet specifications:
+    1. 26 Chars
+    2. No duplicates
+    3. ...
     :param cipher_alphabet: a string of letters
     :return: a T/F boolean value
     """
@@ -109,7 +112,7 @@ def shift_cipher(shift: int):
 
 def substitution_encrypt(plaintext_file, ciphertext_file, cipher_alphabet):
     """
-
+    Encrypts the plaintext_file based on generic substitution encyrption
     :param plaintext_file: a *.txt file that will be encrypted
     :param ciphertext_file: the *.txt filename of the returned encrypted file
     :param cipher_alphabet: a string, the encryption pattern

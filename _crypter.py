@@ -1,6 +1,6 @@
 def _crypter(plaintext_list, cipher_list):
     """
-
+    Encrypt/Decrypts plaintext_list to a ciphertext_list
     :param plaintext_list: list of characters from plaintext_file
     :param cipher_list: a list of the cipher key
     :return: a(n) encrypted/decrypted list, ciphertext_list
