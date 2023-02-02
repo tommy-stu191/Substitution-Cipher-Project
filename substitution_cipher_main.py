@@ -37,7 +37,7 @@ def textfile_to_list(text_file):
     return list_file
 
 
-def cipher_alphabet_to_list(cipher_alphabet):
+def cipher_alphabet_to_list(cipher_alphabet: str):
     """
     Creates cipher list based on str arg
     :param cipher_alphabet: a string of letters
@@ -50,7 +50,7 @@ def cipher_alphabet_to_list(cipher_alphabet):
     return cipher_list
 
 
-def _crypter(plaintext_list, cipher_list):
+def _crypter(plaintext_list: list, cipher_list: list):
     """
     Encrypt/Decrypts plaintext_list to a ciphertext_list
     :param plaintext_list: list of characters from plaintext_file
@@ -77,7 +77,7 @@ def _crypter(plaintext_list, cipher_list):
     return ciphertext_list
 
 
-def list_to_textfile(char_list, textfile_name):
+def list_to_textfile(char_list: list, textfile_name: str):
     """
     Converts list of chars, to a .txt file
     :param char_list: list of characters
@@ -109,7 +109,7 @@ def shift_cipher(shift: int):
     return alpha_lower
 
 
-def substitution_encrypt(plaintext_file, ciphertext_file, cipher_alphabet):
+def substitution_encrypt(plaintext_file, ciphertext_file, cipher_alphabet: str):
     """
     Encrypts the plaintext_file based on generic substitution encryption
     :param plaintext_file: a *.txt file that will be encrypted
@@ -134,7 +134,7 @@ def substitution_encrypt(plaintext_file, ciphertext_file, cipher_alphabet):
     return ciphertext_file
 
 
-def substitution_decrypt(ciphertext_file, plaintext_file, cipher_alphabet):
+def substitution_decrypt(ciphertext_file, plaintext_file, cipher_alphabet: str):
     """
     Decrypts the ciphertext_file based on generic substitution encryption
     :param ciphertext_file: The *.txt file being decrypted

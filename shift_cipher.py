@@ -2,7 +2,6 @@ def shift_cipher(shift: int):
     """
     Shifts the original alphabet list x times
     :param shift: number of shift operations to perform on the cipher list
-    :param pre_cipher: list containing all chars to be encrypted
     :return: list of encryption
     Ex:
     shift_cipher(3,[a..z]) -> [z,y,x,a,b,c...]
