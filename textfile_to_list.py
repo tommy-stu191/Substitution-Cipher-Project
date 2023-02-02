@@ -14,7 +14,3 @@ def textfile_to_list(text_file):
 
     list_file = list(read_file)
     return list_file
-
-
-textfile_to_list("liquid.txt")
-
