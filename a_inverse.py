@@ -1,8 +1,3 @@
-def a_inverse(a):
-    for int in range(0, 26):
-        if a*int % 26 == 1:
-            return int
-
 
 def affine_alph(a,b):
     """
@@ -21,11 +16,12 @@ def affine_alph(a,b):
             alpha_index = alpha_lower.index(char) # find the index of the current character for calculation
             if (a*alpha_index+b)%26 == count: # to ensure the cipher
                 affine_cipher.append(char)
-                print(affine_cipher)
                 count += 1
+    affine_alphabet = ''.join(affine_cipher)
+    return affine_alphabet
 
 
-affine_alph(9,7)
+print(affine_alph(9,7))
 
 
 
