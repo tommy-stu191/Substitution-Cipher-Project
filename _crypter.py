@@ -14,9 +14,7 @@ def _crypter(plaintext_list, cipher_list):
             ciphertext_list.append(char)
         elif char == char.lower():
             alpha_index = alpha_lower.index(char)
-            print(alpha_index)
             crypt_char = cipher_list[alpha_index]
-            print(crypt_char)
             ciphertext_list.append(crypt_char)
         # if upper-case, want to find better way to do this
         else:
