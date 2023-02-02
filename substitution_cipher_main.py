@@ -21,7 +21,7 @@ def cipher_alphabet_checker(cipher_alphabet: str):
 
 def textfile_to_list(text_file):
     """
-
+    Converts .txt to a list of chars
     :param text_file: a text file
     :return: a list of characters from the text file
     """
@@ -39,7 +39,7 @@ def textfile_to_list(text_file):
 
 def cipher_alphabet_to_list(cipher_alphabet):
     """
-
+    Creates cipher list based on str arg
     :param cipher_alphabet: a string of letters
     :return: a list of letters
     """
@@ -52,7 +52,7 @@ def cipher_alphabet_to_list(cipher_alphabet):
 
 def _crypter(plaintext_list, cipher_list):
     """
-
+    Encrypt/Decrypts plaintext_list to a ciphertext_list
     :param plaintext_list: list of characters from plaintext_file
     :param cipher_list: a list of the cipher key
     :return: a(n) encrypted/decrypted list, ciphertext_list
@@ -79,7 +79,7 @@ def _crypter(plaintext_list, cipher_list):
 
 def list_to_textfile(char_list, textfile_name):
     """
-
+    Converts list of chars, to a .txt file
     :param char_list: list of characters
     :param textfile_name: name of the returned textfile
     :return: a textfile
@@ -137,7 +137,7 @@ def substitution_encrypt(plaintext_file, ciphertext_file, cipher_alphabet):
 
 def substitution_decrypt(ciphertext_file, plaintext_file, cipher_alphabet):
     """
-
+    Decrypts the ciphertext_file based on generic substitution encryption
     :param ciphertext_file: The *.txt file being decrypted
     :param plaintext_file: The name of the *.txt file returned
     :param cipher_alphabet: A string "key" for the encryption
@@ -147,6 +147,13 @@ def substitution_decrypt(ciphertext_file, plaintext_file, cipher_alphabet):
 
 
 def caesar_encrypt(plaintext_file, ciphertext_file, shift: int):
+    """
+    Encrypts plaintext_file using Caesar Cipher, based on shift arg
+    :param plaintext_file: Original .txt file to encrypt
+    :param ciphertext_file: Final encryption of plaintext_file
+    :param shift: Num of shifts to perform for caesar cipher
+    :return: A *.txt encrypted file
+    """
     cipher_list = shift_cipher(shift)
     cipher_alphabet = ''.join(cipher_list)
     cipher = substitution_encrypt(plaintext_file, ciphertext_file, cipher_alphabet)
@@ -154,21 +161,52 @@ def caesar_encrypt(plaintext_file, ciphertext_file, shift: int):
 
 
 def caesar_decrypt(ciphertext_file, plaintext_file, shift: int):
+    """
+    Decrypts ciphertext_file using Caesar Cipher, based on shift arg
+    :param ciphertext_file: Encrypted .txt file to be decrypted
+    :param plaintext_file: Final output of Decryption
+    :param shift: Num of shifts to perform decryption
+    :return: A *.txt plaintext file
+    """
     return caesar_encrypt(ciphertext_file, plaintext_file, shift)
 
 
 def rot13_encrypt(plaintext_file, ciphertext_file):
+    """
+    Encrypts .txt files based on rot-13 cipher
+    :param plaintext_file: Original file to encrypt
+    :param ciphertext_file: Encrypted file
+    :return: A *.txt encrypted file
+    """
     return caesar_encrypt(plaintext_file, ciphertext_file, 13)
 
 
 def rot13_decrypt(ciphertext_file, plaintext_file):
+    """
+    Decrypts .txt file based on rot-13 cipher
+    :param ciphertext_file: Encrypted file to decrypt
+    :param plaintext_file: Final decryption of ciphertext_file
+    :return: A *.txt plaintext file
+    """
     return caesar_encrypt(ciphertext_file, plaintext_file, -13)
 
 
 def atbash_encrypt(plaintext_file, ciphertext_file):
+    """
+    Encrypts .txt file based on atbash cipher
+    :param plaintext_file: Original .txt file to encrypt
+    :param ciphertext_file: Final encryption of plaintext_file
+    :return: An encrypted version of plaintext_file
+    """
     atbash_alpha = 'zyxwvutsrqponmlkjihgfedcba'
     return substitution_encrypt(plaintext_file, ciphertext_file, atbash_alpha)
 
 
 def atbash_decrypt(ciphertext_file, plaintext_file):
+    """
+    Decrypts Ciphertext_file based on atbash encyption
+    :param ciphertext_file: Encrypted .txt file to decrypt
+    :param plaintext_file: Final decryption of ciphertext_file
+    :return: A *.txt file containing decrypted ciphertext
+    """
     return atbash_encrypt(ciphertext_file, plaintext_file)

@@ -10,3 +10,10 @@ add doctrings to all functions
 set parameter type, for example, shift: int  
 ensure all code is commented properly  
 test! try to break each function, fix them as needed  
+
+
+# Tommy Ideas:
+- Confirm all functions contain docstrings
+  - a_inverse
+  - cipher_alphabet_checker.py - Requirements for valid cipher_alphabet
+  - 
