@@ -1,9 +1,12 @@
-# Needs a docstring
-# For consistency and conciseness among named variables,
-# consider changing string >> cipher_alphabet
-
-def cipher_alphabet_list(string):
+def cipher_alphabet_to_list(cipher_alphabet):
+    """
+    Converts a string into a list.
+    :param cipher_alphabet: a string of letters
+    :return: a list of letters
+    """
     cipher_list = []
-    for char in string:
+    # Appends each character to the list
+    for char in cipher_alphabet:
         cipher_list.append(char)
+
     return cipher_list
